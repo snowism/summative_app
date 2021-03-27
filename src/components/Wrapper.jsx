@@ -30,6 +30,7 @@ export default class Wrapper extends Component {
               key={index}
               name={item.name}
               price={item.newprice}
+              usedPrice={item.oldprice}
              id={item.id}
              filepath = {item.filepath}
             />
