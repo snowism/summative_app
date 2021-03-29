@@ -14,6 +14,8 @@ export default class SingleCard extends Component {
               
                <p>{this.props.name}</p>
                <p>{this.props.price}</p>
+               <p>{this.props.usedPrice}</p>
+               <p>{this.props.Price}</p>
             </div>
         )
     }
