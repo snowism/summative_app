@@ -10,7 +10,7 @@ export default class SingleCard extends Component {
     
     render() {
         return (
-            <div >
+            <div className="card">
               
                <p>{this.props.name}</p>
                <p>{this.props.price}</p>
