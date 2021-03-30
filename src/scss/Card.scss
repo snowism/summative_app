@@ -1,4 +1,4 @@
-$cardColor: white;
+$cardColor: #ecedef;
 
 .box {
   display: flex;
@@ -12,10 +12,14 @@ $cardColor: white;
 .card {
   background-color: $cardColor;
   width: 360px;
-
+text-align: center;
   margin: 0.6rem;
 }
 
+.product-img {
+  height: 150px;
+  
+}
 
 .select-box {
   width: 360px;
