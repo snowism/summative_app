@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from '@reach/router'
+import { navigate } from '@reach/router'
 import Axios from "axios";
 
 
@@ -13,7 +13,10 @@ export default class SingleCard extends Component {
 
             
                
-            <div onClick={ navigate (`/product-details`+{state: {id:this.props.id}})
+            <div onClick={ 
+                e => navigate (`/product-details`)
+            }
+
           className="card">
               
        
