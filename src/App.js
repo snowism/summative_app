@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Wrapper from './components/Wrapper'
-import Landing from './components/Landing'
-
-import './scss/Card.scss'
-import './scss/Style.scss'
+import Wrapper from './components/Wrapper';
+import Landing from './components/Landing';
+import './scss/Card.scss';
+import './scss/Style.scss';
+import './scss/Landing.scss';
 
 function App() {
   return (
