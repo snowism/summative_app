@@ -9,9 +9,9 @@ export default class SelectBrand extends Component {
               <h3> Select by brand </h3>
             </div>
       <div className="select-box">
-        <Link to="/show-nike"><div className="nike">a</div></Link>
-        <div className="nike">b</div>
-        <div className="nike">c</div>
+        <Link to="/show-nike"><div className="nike"><img src="./images/logo_n.png"/></div></Link>
+        <Link to="/show-nike"><div className="nike"><img src="./images/logo_a.png"/></div></Link>
+        <Link to="/show-nike"><div className="nike"><img src="./images/logo_j.png"/></div></Link>
       </div>
       </React.Fragment>
         )
