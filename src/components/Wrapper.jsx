@@ -28,7 +28,9 @@ export default class Wrapper extends Component {
      
       <React.Fragment>
         <SelectBrand/>
-      <h3>Featured</h3>
+        
+      <h3 className="title">Featured</h3>
+     
      <div className="box">
         {this.state.sneakersArray.map((item, index) => {
           return (
