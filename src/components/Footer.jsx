@@ -11,6 +11,11 @@ import LoyaltyIcon from '@material-ui/icons/Loyalty';
 const useStyles = makeStyles({
   root: {
     width: 375,
+    bottom: 0,
+    position: "fixed",
+    background: "#E3E0D8",
+    borderRadius: 5,
+    
   },
 });
 
