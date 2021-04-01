@@ -5,7 +5,11 @@ import Axios from "axios";
 
 export default class SingleCard extends Component {
 
-    
+    goToDetails = e => {
+        
+        navigate (`/product-details`, {state: {id:this.props.id}});
+        console.log("go to single info")
+}
 
     
     render() {
@@ -13,9 +17,7 @@ export default class SingleCard extends Component {
 
             
                
-            <div onClick={ 
-                e => navigate (`/product-details`)
-            }
+            <div onClick={this.goToDetails}  
 
           className="card">
               
