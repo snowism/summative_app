@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-no-undef */
 import logo from './logo.svg';
 import { Router } from '@reach/router'
 
 import Wrapper from './components/Wrapper'
 import Nike from "./components/Nike"
 import ViewDetails from "./components/ViewDetails"
+import Landing from './components/Landing'
 
 import './App.css';
 import './scss/Card.scss'
@@ -17,9 +19,11 @@ function App() {
      <Wrapper path="/"/>
      <ViewDetails path="/product-details"/>
      <Nike path="/show-nike"/>
-
+     {/* <Landing/> */}
+   
      </Router>
-     {/* <Footer/> */}
+     <Footer/>
+      
     </div>
   );
 }
