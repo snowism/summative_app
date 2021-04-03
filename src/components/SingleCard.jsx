@@ -24,7 +24,7 @@ export default class SingleCard extends Component {
        
               <img src={"./images/" + this.props.filepath} className="product-img" alt=""/>
                <p>{this.props.name}</p>
-               <p>{this.props.price}</p>
+               <p>NZD $ {this.props.price}</p>
                <p></p>
           
               

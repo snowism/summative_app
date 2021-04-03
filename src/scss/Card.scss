@@ -10,10 +10,13 @@ $cardColor: #ecedef;
 }
 
 .card {
+  font-family: 'Courier New', Courier, monospace;
   background-color: $cardColor;
   width: 360px;
 text-align: center;
   margin: 0.6rem;
+  margin-bottom: 2rem;
+  // padding: 1rem;
 }
 
 .product-img {

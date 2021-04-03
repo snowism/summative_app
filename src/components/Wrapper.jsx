@@ -31,7 +31,7 @@ export default class Wrapper extends Component {
         
       <h3 className="title">Featured</h3>
      
-     <div className="box">
+     <div className="card-box">
         {this.state.sneakersArray.map((item, index) => {
           return (
            
