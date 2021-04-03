@@ -10,6 +10,7 @@ export default class SelectBrand extends Component {
         <Link to="/show-nike"><div className="nike"><img src="./images/logo_n.png"/></div></Link>
         <Link to="/show-nike"><div className="nike"><img src="./images/logo_a.png"/></div></Link>
         <Link to="/show-nike"><div className="nike"><img src="./images/logo_j.png"/></div></Link>
+        
       </div>
       </React.Fragment>
         )

@@ -7,6 +7,7 @@ import Nike from "./components/Nike"
 import ViewDetails from "./components/ViewDetails"
 import Landing from './components/Landing'
 import Footer from "./components/Footer"
+
 import './App.css';
 import './scss/Card.scss'
 import './scss/Style.scss'
