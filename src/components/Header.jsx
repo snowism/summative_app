@@ -7,6 +7,7 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import SearchIcon from '@material-ui/icons/Search';
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -62,9 +63,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 export default function SearchAppBar() {
   const classes = useStyles();
 
+
+  
   return (
     <div className={classes.root}>
       <AppBar 
@@ -79,7 +84,7 @@ export default function SearchAppBar() {
             color="inherit"
             aria-label="open drawer"
           >
-            <ArrowBackIosIcon />
+            <ArrowBackIosIcon/>
           </IconButton>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

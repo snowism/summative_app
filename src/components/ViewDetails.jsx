@@ -33,14 +33,39 @@ export default class ViewDetails extends Component {
 
     render() {
         return (
-            <div className="detail-box">
+            <div className="detail-wrapper">
                
+               <div className="detail-box">
                 <img className="detail-img" src={"./images/" + this.state.sneaker.filepath} alt="sneaker image"/>
                 <p>{this.state.sneaker.name}</p>
-                <p>{this.state.sneaker.price}</p>
+                </div>
+               <div className="select-price">
+               <p>NZD $ {this.state.sneaker.newprice}</p>
+               </div>
                
-               
-                <SiteButton message="Back" action={this.navigateBack}/>
+<div className="select-size">
+    
+    <div><span className="size">8.5</span>  
+           
+
+    </div>
+    <div><span className="size">9</span>  </div>
+    <div><span className="size">9.5</span>  </div>
+    <div><span className="size">10</span>  </div>
+    <div><span className="size">10.5</span>  </div>
+
+    </div>
+
+<div className="total-price">
+$
+</div>
+
+<div className="button-box">
+
+<SiteButton className="return" message="Back" action={this.navigateBack}/>
+                <SiteButton className="checkout" message="checkout"/>
+</div>
+                
             </div>
         )
     }
