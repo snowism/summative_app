@@ -12,7 +12,7 @@ import ViewDetails from "./components/ViewDetails"
 import './App.css';
 import './scss/Card.scss'
 import './scss/Style.scss'
-import './App.css';
+
 
 
 
