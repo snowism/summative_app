@@ -33,7 +33,9 @@ export default function LabelBottomNavigation() {
   
   return (
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-      <BottomNavigationAction label="Home" value="home" icon={<HomeIcon/>} />
+      
+      <Link to="/">
+      <BottomNavigationAction label="Home" value="home" icon={<HomeIcon/>} /></Link>
       <BottomNavigationAction label="Profile" value="profile" icon={<PersonIcon />} />
       
       <Link to="/add-product">
