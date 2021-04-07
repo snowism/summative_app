@@ -13,7 +13,7 @@ import Upload from "./components/Upload";
 import './App.css';
 import './scss/Card.scss';
 import './scss/Style.scss';
-import './App.css';
+import './scss/Form.scss';
 
 
 
