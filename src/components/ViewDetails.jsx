@@ -3,6 +3,7 @@ import Axios from "axios";
 import SiteButton from "./SiteButton";
 import { navigate } from "@reach/router";
 
+
 export default class ViewDetails extends Component {
     constructor (props){
         super (props);
@@ -39,8 +40,26 @@ export default class ViewDetails extends Component {
                 <img className="detail-img" src={"./images/" + this.state.sneaker.filepath} alt="sneaker image"/>
                 <p>{this.state.sneaker.name}</p>
                 </div>
+
+
+
                <div className="select-price">
-               <p>NZD $ {this.state.sneaker.newprice}</p>
+
+               <label class="container">
+              
+  <input type="radio" checked="checked" name="radio" value={this.state.sneaker.newprice}/>
+  <span class="checkmark"></span>
+
+ NZD $ {this.state.sneaker.newprice}
+</label>
+<label class="container">
+NZD $ {this.state.sneaker.oldprice}
+  <input type="radio" name="radio" value={this.state.sneaker.oldprice}/>
+  <span class="checkmark"></span>
+</label>
+
+
+              
                </div>
                
 <div className="select-size">

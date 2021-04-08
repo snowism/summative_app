@@ -12,6 +12,8 @@ export default class SingleCard extends Component {
 }
 
     
+
+
     render() {
         return (
 
