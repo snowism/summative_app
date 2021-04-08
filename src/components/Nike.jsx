@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-import Axios from "axios";
-import SingleCard from "./SingleCard";
-
+import React, { Component } from 'react'
+import Axios from "axios"
+import SingleCard from "./SingleCard"
 
 
 export default class Nike extends Component {
@@ -26,16 +25,18 @@ export default class Nike extends Component {
   }
   
 
-  render() {
-    return (
-     
-      <React.Fragment>
-      
-        
-     <h3>NIKE</h3>
+    render() {
 
-     <div className="card-box">
+        const brandFilter = this.state.brand
+
+        return (
+
+           
+            <div>
+       
         {this.state.sneakersArray.map((item, index) => {
+
+
           return (
            
             
@@ -45,7 +46,9 @@ export default class Nike extends Component {
               name={item.name}
               price={item.newprice}
               usedPrice={item.oldprice}
-              
+
+            
+              brand={item.brand}
              id={item.id}
              filepath = {item.filepath}
             />
@@ -53,7 +56,7 @@ export default class Nike extends Component {
           );
         })}
        </div>
-      </React.Fragment>
-    );
-  }
+            
+        )
+    }
 }
