@@ -24,7 +24,7 @@ const useStyles = makeStyles({
 
 export default function LabelBottomNavigation() {
   const classes = useStyles();
-  const [value, setValue] = React.useState('recents');
+  const [value, setValue] = React.useState('home');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -33,15 +33,11 @@ export default function LabelBottomNavigation() {
   
   return (
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-      
-      <Link to="/">
-      <BottomNavigationAction label="Home" value="home" icon={<HomeIcon/>}/>
-      
-      </Link>
+      <BottomNavigationAction component={Link} to="/" label="Home" value="home" icon={<HomeIcon/>} />
       <BottomNavigationAction label="Profile" value="profile" icon={<PersonIcon />} />
       
-      <Link to="/add-product">
-      <BottomNavigationAction label="Sell" value="sell" icon={<LoyaltyIcon/> } /></Link>
+     
+      <BottomNavigationAction component={Link} to="/add-product" label="Sell" value="sell" icon={<LoyaltyIcon/> } />
       
       <BottomNavigationAction label="Cart" value="cart" icon={<ShoppingCartIcon />} />
     </BottomNavigation>
