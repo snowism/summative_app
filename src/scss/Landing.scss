@@ -1,3 +1,79 @@
-.landing {
-    background-color: black;
+body {
+    background-color: #000000;
 }
+
+.landing-wrapper img {
+    display: flex;
+    align-content: center;
+}
+
+.app-logo img{
+    height: 400px;
+    width: 200px;
+    margin-left: 80px;
+}
+
+.button1{
+    height: 60px;
+    width: 200px;
+    margin: 0 5px;
+    background: white;
+    border-radius: 50px;
+    border-style: none;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+ }
+
+  .button1 span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 55px;
+    color: black;
+    font-family: Roboto;
+    
+   
+  }
+  
+  .button1:hover{
+    cursor: pointer;
+    
+  }
+
+  .button2{
+    height: 60px;
+    width: 200px;
+    margin: 0 5px;
+    background: white;
+    border-radius: 50px;
+    border-style: none;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+ }
+
+  .button2 span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 55px;
+    color: black;
+    font-family: Roboto;
+   
+  }
+  
+  .button2:hover{
+    cursor: pointer;
+  }
