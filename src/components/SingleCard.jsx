@@ -5,18 +5,32 @@ import Axios from "axios";
 
 export default class SingleCard extends Component {
 
-    
+    goToDetails = e => {
+        
+        navigate (`/product-details`, {state: {id:this.props.id}});
+        console.log("go to single info")
+}
 
     
     render() {
         return (
-            <div className="card">
+
+            
+               
+            <div onClick={this.goToDetails}  
+
+          className="card">
               
+       
+              <img src={"./images/" + this.props.filepath} className="product-img" alt=""/>
                <p>{this.props.name}</p>
-               <p>{this.props.price}</p>
-               <p>{this.props.usedPrice}</p>
-               <p>{this.props.Price}</p>
+               <p>NZD $ {this.props.price}</p>
+               <p></p>
+          
+              
             </div>
+               
+           
         )
     }
 }
