@@ -31,6 +31,8 @@ export default class Upload extends Component {
     event.preventDefault();
   };
 
+
+
   handleFilepath = e => {
     this.setState({ filepath: e.target.value });
   }
@@ -52,16 +54,20 @@ export default class Upload extends Component {
   
 
 handleFileInput = (e) => {
-    this.setState({selectedFile: e.target.files[0]})
+    this.setState({filepath: e.target.files[0]})
 }
+
+
 
   render() {
     return (
       <div className="form-wrapper">
         <form onSubmit={this.handleSubmit}>
             <h3>Sell your item</h3>
+
+            
             <div>
-        <input type="file" name="file" onChange={null}/>
+        <input type="file" name="file" onChange={this.handleFileInput}/>
         </div>
 
           <div>
