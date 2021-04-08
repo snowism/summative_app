@@ -81,9 +81,9 @@ export default function SearchAppBar() {
         <Toolbar>
           <IconButton
             edge="start"
-            className={classes.menuButton}
+            className={classes.backButton}
             color="inherit"
-            aria-label="open drawer"
+            aria-label="back"
           >
             <ArrowBackIosIcon/>
           </IconButton>

@@ -7,6 +7,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import HomeIcon from '@material-ui/icons/Home';
 import PersonIcon from '@material-ui/icons/Person';
 import LoyaltyIcon from '@material-ui/icons/Loyalty';
+import { Link } from "@reach/router";
 
 const useStyles = makeStyles({
   root: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles({
 
 export default function LabelBottomNavigation() {
   const classes = useStyles();
-  const [value, setValue] = React.useState('recents');
+  const [value, setValue] = React.useState('home');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -29,7 +30,7 @@ export default function LabelBottomNavigation() {
 
   return (
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-      <BottomNavigationAction label="Home" value="home" icon={<HomeIcon/>} />
+      <BottomNavigationAction component={Link} to="/" label="Home" value="home" icon={<HomeIcon/>} />
       <BottomNavigationAction label="Profile" value="profile" icon={<PersonIcon />} />
       <BottomNavigationAction label="Sell" value="sell" icon={<LoyaltyIcon />} />
       <BottomNavigationAction label="Cart" value="cart" icon={<ShoppingCartIcon />} />
