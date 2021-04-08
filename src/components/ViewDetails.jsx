@@ -11,7 +11,8 @@ export default class ViewDetails extends Component {
 
         this.state = {
             id: this.props.location.state.id,
-            sneaker: {name:""}
+            sneaker: {name:""
+            }
         }
 
         console.log(">>>> ", this.props.location.state.id);
@@ -22,8 +23,7 @@ export default class ViewDetails extends Component {
         Axios.get( `http://localhost:4000/api/sneakers/${this.state.id}`).then (
             res => {
                 console.table(res);
-
-                this.setState({sneaker:res.data})
+             this.setState({sneaker:res.data})
             }
         )
     }
