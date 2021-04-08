@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-undef */
-import logo from './logo.svg';
+
 import { Router } from '@reach/router'
 
 
@@ -14,6 +14,7 @@ import './App.css';
 import './scss/Card.scss';
 import './scss/Style.scss';
 import './scss/Form.scss';
+
 
 
 
