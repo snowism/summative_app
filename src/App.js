@@ -8,11 +8,13 @@ import Header from './components/Header';
 import Nike from "./components/Nike";
 import ViewDetails from "./components/ViewDetails";
 import LoginPage from './components/LoginPage';
+import SignUpPage from './components/SignUpPage';
 
 import './App.css';
 import './scss/Card.scss';
 import './scss/Style.scss';
 import './scss/LoginPage.scss';
+import './scss/SignUpPage.scss';
 
 
 
@@ -23,7 +25,7 @@ import './scss/LoginPage.scss';
 function App() {
   return (
     <div className="App">
-      <LoginPage/>
+      <SignUpPage/>
     </div>
   );
 }
