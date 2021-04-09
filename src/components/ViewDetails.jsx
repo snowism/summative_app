@@ -12,7 +12,8 @@ export default class ViewDetails extends Component {
         this.state = {
             id: this.props.location.state.id,
             sneaker: {name:""
-            }
+            },
+            totalprice:"",
         }
 
         console.log(">>>> ", this.props.location.state.id);
@@ -31,6 +32,18 @@ export default class ViewDetails extends Component {
     navigateBack = e => {
         navigate(-1);
     };
+
+    
+
+    clickedPrice = e => {
+        
+      
+        this.setState({ totalprice: e.target.value });
+      
+        console.log (e.target.value);
+        
+    }
+
 
     render() {
         return (
@@ -51,13 +64,13 @@ export default class ViewDetails extends Component {
  
  <span>New Item: NZD $ {this.state.sneaker.newprice}</span>
  
- <input type="radio" checked="checked" name="radio" value={this.state.sneaker.newprice}/>
+ <input type="radio" checked="checked" name="radio" value={this.state.sneaker.newprice} onChange={this.clickedPrice}/>
 </label>
 <label class="container">
 <span>Used Item: NZD $ {this.state.sneaker.oldprice}</span>
   
   
-  <input type="radio" name="radio" value={this.state.sneaker.oldprice}/>
+  <input type="radio" name="radio" value={this.state.sneaker.oldprice} onChange={this.clickedPrice}/>
 </label>
 
 
@@ -66,10 +79,7 @@ export default class ViewDetails extends Component {
                
 <div className="select-size">
     
-    <div><span className="size">8.5</span>  
-           
-
-    </div>
+    <div><span className="size">8.5</span> </div>
     <div><span className="size">9</span>  </div>
     <div><span className="size">9.5</span>  </div>
     <div><span className="size">10</span>  </div>
@@ -77,9 +87,10 @@ export default class ViewDetails extends Component {
 
     </div>
 
-<div className="total-price">
-$
-</div>
+<div className="total-price"
+value={this.state.totalprice}/>
+
+
 
 <div className="button-box">
 
