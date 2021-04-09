@@ -33,9 +33,10 @@ export default class SingleCard extends Component {
 
                <p>NZD $ {this.props.price}</p>
               
+              <div className="icon-box">
                <SiteButton action={this.goToDetails} message={""} icon={<EditIcon />}/>
                 <SiteButton action={this.goToDetails} icon={<DeleteIcon />}/>
-          
+                </div>
               
             </div>
                

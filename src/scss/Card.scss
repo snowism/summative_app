@@ -48,59 +48,17 @@ $cardColor: #ecedef;
   }
 }
 
-// details page
-
-.detail-wrapper {
-  text-align: center;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.detail-box {
-  text-align: center;
-  padding: 1rem;
-}
-.detail-img {
-  width: 200px;
-}
-
-.select-size {
+.icon-box {
+  // background-color: cadetblue;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-padding: 1rem;
-  div {
-    width: 60px;
-    height: 60px;
+  float: right;
+  top: 0;
 
-    border-radius: 8px;
-    background-color: white;
-    text-align: center;
-    position: relative;
-
-
-    span {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      position: absolute;
-    }
+  
+  button {
+    border: none;
+    color:gray;
   }
-}
 
-
-.total-price {
-  height: 40px;
-  margin-top: 1rem;
-  padding: auto;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-.button-box {
-  height: 40px;
-  margin-top: 1rem;
-  padding: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
