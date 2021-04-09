@@ -20,6 +20,7 @@ import './App.css';
 import './scss/Card.scss';
 import './scss/Style.scss';
 import './scss/Form.scss';
+import './scss/Detailspage.scss';
 // import './scss/Landing.scss';
 
 

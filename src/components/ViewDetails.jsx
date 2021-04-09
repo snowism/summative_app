@@ -47,15 +47,17 @@ export default class ViewDetails extends Component {
 
                <label class="container">
               
-  <input type="radio" checked="checked" name="radio" value={this.state.sneaker.newprice}/>
-  <span class="checkmark"></span>
-
- NZD $ {this.state.sneaker.newprice}
+  
+ 
+ <span>New Item: NZD $ {this.state.sneaker.newprice}</span>
+ 
+ <input type="radio" checked="checked" name="radio" value={this.state.sneaker.newprice}/>
 </label>
 <label class="container">
-NZD $ {this.state.sneaker.oldprice}
+<span>Used Item: NZD $ {this.state.sneaker.oldprice}</span>
+  
+  
   <input type="radio" name="radio" value={this.state.sneaker.oldprice}/>
-  <span class="checkmark"></span>
 </label>
 
 
