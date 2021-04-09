@@ -5,9 +5,12 @@ export default class SiteButton extends Component {
     render() {
         return (
             <div>
-                  <button onClick={this.props.action}>
+                  <button onClick={this.props.action} >
           {/* || is a javascript OR */}
-          {this.props.message || "set text via props"}
+          {this.props.message }   {this.props.icon}
+          {/* "set text via props" */}
+        
+
         </button>
             </div>
         )
