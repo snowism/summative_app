@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { navigate } from '@reach/router'
+import React, { Component } from 'react';
+import { navigate } from '@reach/router';
 import Axios from "axios";
-
+import SiteButton from './SiteButton';
 
 export default class SingleCard extends Component {
 
@@ -29,7 +29,9 @@ export default class SingleCard extends Component {
                <p>{this.props.name}</p>
 
                <p>NZD $ {this.props.price}</p>
-               <p></p>
+              
+               {/* <SiteButton action={this.goToUpdate} message={"Update"}/>
+                <SiteButton action={this.onDelete} message={"Delete"}/> */}
           
               
             </div>
