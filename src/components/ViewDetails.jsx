@@ -3,6 +3,7 @@ import Axios from "axios";
 import SiteButton from "./SiteButton";
 import { navigate } from "@reach/router";
 
+
 export default class ViewDetails extends Component {
     constructor (props){
         super (props);
@@ -10,7 +11,8 @@ export default class ViewDetails extends Component {
 
         this.state = {
             id: this.props.location.state.id,
-            sneaker: {name:""}
+            sneaker: {name:""
+            }
         }
 
         console.log(">>>> ", this.props.location.state.id);
@@ -21,8 +23,7 @@ export default class ViewDetails extends Component {
         Axios.get( `http://localhost:4000/api/sneakers/${this.state.id}`).then (
             res => {
                 console.table(res);
-
-                this.setState({sneaker:res.data})
+             this.setState({sneaker:res.data})
             }
         )
     }
@@ -39,8 +40,28 @@ export default class ViewDetails extends Component {
                 <img className="detail-img" src={"./images/" + this.state.sneaker.filepath} alt="sneaker image"/>
                 <p>{this.state.sneaker.name}</p>
                 </div>
+
+
+
                <div className="select-price">
-               <p>NZD $ {this.state.sneaker.newprice}</p>
+
+               <label class="container">
+              
+  
+ 
+ <span>New Item: NZD $ {this.state.sneaker.newprice}</span>
+ 
+ <input type="radio" checked="checked" name="radio" value={this.state.sneaker.newprice}/>
+</label>
+<label class="container">
+<span>Used Item: NZD $ {this.state.sneaker.oldprice}</span>
+  
+  
+  <input type="radio" name="radio" value={this.state.sneaker.oldprice}/>
+</label>
+
+
+              
                </div>
                
 <div className="select-size">
