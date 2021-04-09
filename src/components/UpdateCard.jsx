@@ -25,7 +25,7 @@ export default class UpdateCard extends Component {
           name: res.data.name,
           brand: res.data.brand,
           newprice: res.data.newprice,
-          usedprice: res.data.oldeprice,
+          usedprice: res.data.oldprice,
           
           id: res.data.id,
          
@@ -61,9 +61,9 @@ export default class UpdateCard extends Component {
   handleBrand =(e) => {
     this.setState({ brand: e.target.value });
   }
-  
+
   handlePrice = (e) => {
-    this.setState({ price: e.target.value });
+    this.setState({ newprice: e.target.value });
   };
   handleUsedPrice = (e) => {
     this.setState({ usedprice: e.target.value });
@@ -79,7 +79,7 @@ export default class UpdateCard extends Component {
 
     return (
          <div className="form-wrapper">
-        <h1>Update Musician:</h1>
+        <h3>Update Product:</h3>
         <form className="special" onSubmit={this.updateItem}>
 
         <div>
@@ -119,7 +119,7 @@ export default class UpdateCard extends Component {
               type="text"
               name="price"
               placeholder="new item price"
-              value={this.state.price}
+              value={this.state.newprice}
               onChange={this.handlePrice}
             />
           </div>
