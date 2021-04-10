@@ -11,6 +11,8 @@ import ViewDetails from "./components/ViewDetails"
 import UpdateCard from "./components/UpdateCard"
 import Upload from "./components/Upload";
 
+import CommentsWrapper from "./components/CommentsWrapper";
+
 import './App.css';
 import './scss/Card.scss'
 import './scss/Style.scss'
@@ -28,7 +30,8 @@ function App() {
      
      <Header/>
       <Router>
-     <Wrapper path="/"/>
+        <CommentsWrapper path="/"/>
+     {/* <Wrapper path="/"/> */}
      <ViewDetails path="/product-details"/>
      <Nike path="/show-nike"/>
    <Upload path="/add-product"/>

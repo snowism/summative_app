@@ -44,13 +44,17 @@ onCommentDelete = e => {
           className="comment-card">
               
        
-             
+              <div className="row">
+
                <p>{this.props.username}</p>
-               <p>{this.props.item}</p>
+               <span className="item-name">{this.props.item}</span>
+               </div>
+
+<div className="review-box">
                <p>{this.props.review}</p>
+               </div>
               
-              
-              <div className="icon-box">
+               <div className="icon-box">
                <SiteButton action={this.goToCommentEdit} icon={<EditIcon />}/>
                 <SiteButton action={this.onCommentDelete} icon={<DeleteIcon />}/>
                 </div>

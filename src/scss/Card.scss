@@ -62,3 +62,37 @@ $cardColor: #ecedef;
   }
 
 }
+
+
+// comments
+
+.comment-card {
+  background-color: $cardColor;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  .row {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    p {
+      font-weight: bold;
+    }
+
+  }
+
+  span {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 1rem;
+  }
+
+}
+
+
+.review-box {
+  background-color: red;
+  text-align: left;
+}

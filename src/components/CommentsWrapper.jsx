@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
-import SingleCard from "./SingleCard";
-import SelectBrand from "./SelectBrand";
+import CommentsCard from "./CommentsCard";
+
 
 //all product
 
