@@ -90,9 +90,9 @@ export default class AddComment extends Component {
               onChange={this.handleReview}
             />
           </div>
-          {/* <input type="hidden" name="id" value={this.state.id} /> */}
+          <input type="hidden" name="id" value={this.state.id} />
 
-          <button className="submit-btn" type="submit">Submit</button>
+          <button className="submit-btn" type="submit">Add comment</button>
         </form>
         {/* <Modal showmodal={this.state.showmodal} onClose={this.onClose}/> */}
       </div>

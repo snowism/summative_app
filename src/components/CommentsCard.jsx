@@ -10,10 +10,6 @@ export default class CommentsCard extends Component {
 
     
 
-goToCommentEdit = e => {
-    navigate (`/edit-comment`, {state: {id:this.props.id}});
-        console.log("go to update")
-}
 
 onCommentDelete = e => {
     console.log("deleting", this.props.id);
