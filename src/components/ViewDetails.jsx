@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Axios from "axios";
 import SiteButton from "./SiteButton";
 import { navigate } from "@reach/router";
+import CommentsWrapper from "./CommentsWrapper";
 
 
 export default class ViewDetails extends Component {
@@ -55,7 +56,9 @@ export default class ViewDetails extends Component {
                 </div>
 
 
-
+<div className="comment">
+    <CommentsWrapper/>
+</div>
                <div className="select-price">
 
                <label class="container">

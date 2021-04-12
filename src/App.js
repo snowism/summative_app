@@ -30,8 +30,8 @@ function App() {
      
      <Header/>
       <Router>
-        <CommentsWrapper path="/"/>
-     {/* <Wrapper path="/"/> */}
+       
+     <Wrapper path="/"/>
      <ViewDetails path="/product-details"/>
      <Nike path="/show-nike"/>
    <Upload path="/add-product"/>

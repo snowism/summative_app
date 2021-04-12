@@ -66,11 +66,18 @@ $cardColor: #ecedef;
 
 // comments
 
+.comment {
+  background-color: blue;
+}
+
 .comment-card {
   background-color: $cardColor;
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  margin: 1rem;
+position: relative;
+
 
   .row {
     
@@ -82,6 +89,12 @@ $cardColor: #ecedef;
       font-weight: bold;
     }
 
+    .co-icon-box {
+      position: absolute;
+      float: right;
+      background-color: green;
+    }
+  
   }
 
   span {
@@ -93,6 +106,8 @@ $cardColor: #ecedef;
 
 
 .review-box {
-  background-color: red;
+  
   text-align: left;
+  
 }
+

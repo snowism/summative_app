@@ -54,8 +54,8 @@ onCommentDelete = e => {
                <p>{this.props.review}</p>
                </div>
               
-               <div className="icon-box">
-               <SiteButton action={this.goToCommentEdit} icon={<EditIcon />}/>
+               <div className="co-icon-box">
+            
                 <SiteButton action={this.onCommentDelete} icon={<DeleteIcon />}/>
                 </div>
               
