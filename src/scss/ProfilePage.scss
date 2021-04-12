@@ -1,0 +1,67 @@
+.profilepic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 180px;
+}
+
+.ptitle{
+    margin-left: 15px;
+}
+
+.icon_previous1 {
+    margin-left: 15px;
+       color: white;
+       font-size: 25px;
+       line-height: 50px;
+       float: left;
+       
+     }
+     
+     
+     .button_previous1{
+        height: 45px;
+        width: 60px;
+       background: black;
+       border-radius: 8px;
+       transition: all 0.3s ease-out;
+       overflow: hidden;
+       text-decoration: none;
+       list-style: none;
+       margin-top: 10px;
+      margin-left: 15px;
+       
+     }
+     
+     .button_previous1 span{
+        font-size: 15px;
+       font-weight: 500;
+       line-height: 45px;
+       color: white;
+       margin-left: 30px;
+       font-family: 'Roboto';
+      
+     }
+     
+     .button_previous1:hover{
+       width: 175px;
+       cursor: pointer;
+     }
+
+     .profilename{
+         font-family: 'Courier New', Courier, monospace;
+         font-weight: 400;
+         font-size: 20px;
+     }
+
+     .edit{
+       background-color: black;
+       border-radius: 8px;
+       border: black;
+       height: 45px;
+       width: 175px;
+       font-size: 15px;
+       font-weight: 500;
+       color: white;
+       font-family: 'Roboto';
+     }
