@@ -71,10 +71,6 @@
   color: gray;
 }
 
-.comment {
-  background-color: blue;
-}
-
 .comment-card {
   background-color: #ecedef;
   display: -webkit-box;

@@ -82,7 +82,7 @@ export default class AddComment extends Component {
           </div>
           <div>
             <label>comments</label>
-            <input
+            <textarea 
               type="text"
               name="comments"
               placeholder="leave your comments"
