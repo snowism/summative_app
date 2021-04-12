@@ -54,21 +54,7 @@
   position: absolute;
 }
 
-.detail-wrapper {
-  text-align: center;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.detail-box {
-  text-align: center;
-  padding: 1rem;
-}
-
-.detail-img {
-  width: 200px;
-}
-
-.select-size {
+.icon-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,40 +62,34 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  float: right;
+  top: 0;
 }
 
-.select-size div {
-  width: 60px;
-  height: 60px;
-  border-radius: 8px;
-  background-color: white;
-  text-align: center;
+.icon-box button {
+  border: none;
+  color: gray;
+}
+
+.comment {
+  background-color: blue;
+}
+
+.comment-card {
+  background-color: #ecedef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  margin: 1rem;
   position: relative;
 }
 
-.select-size div span {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  position: absolute;
-}
-
-.total-price {
-  height: 40px;
-  margin-top: 1rem;
-  padding: auto;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-.button-box {
-  height: 40px;
-  margin-top: 1rem;
-  padding: auto;
+.comment-card .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,8 +97,27 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment-card .row p {
+  font-weight: bold;
+}
+
+.comment-card .row .co-icon-box {
+  position: absolute;
+  float: right;
+  background-color: green;
+}
+
+.comment-card span {
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 1rem;
+}
+
+.review-box {
+  text-align: left;
 }
 /*# sourceMappingURL=Card.css.map */

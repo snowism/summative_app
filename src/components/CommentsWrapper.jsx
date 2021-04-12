@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import CommentsCard from "./CommentsCard";
-
+import AddComment from "./AddComment";
 
 //all comments
 
@@ -27,10 +27,10 @@ export default class CommentsWrapper extends Component {
     return (
      
       <React.Fragment>
-      
+     
         
       <h3 className="title">User Comments</h3>
-     
+    
      <div className="card-box">
         {this.state.commentsArray.map((item, index) => {
           return (

@@ -3,7 +3,7 @@ import Axios from "axios";
 import SiteButton from "./SiteButton";
 import { navigate } from "@reach/router";
 import CommentsWrapper from "./CommentsWrapper";
-
+import AddComment from "./AddComment";
 
 export default class ViewDetails extends Component {
     constructor (props){
@@ -57,8 +57,12 @@ export default class ViewDetails extends Component {
 
 
 <div className="comment">
+
+      
     <CommentsWrapper/>
+    <AddComment/>
 </div>
+
                <div className="select-price">
 
                <label class="container">
