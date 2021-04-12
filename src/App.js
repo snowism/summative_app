@@ -10,6 +10,7 @@ import Wrapper from './components/Wrapper';
 import logo from './logo.svg';
 
 import { Router } from '@reach/router'
+import ProfilePage from './components/ProfilePage';
 
 
 
@@ -42,6 +43,7 @@ function App() {
      <Header/>
       <Router>
      <Wrapper path="/"/>
+     <ProfilePage path="/profile-page"/>
      <ViewDetails path="/product-details"/>
      <Nike path="/show-nike"/>
    <Upload path="/add-product"/>
