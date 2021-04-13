@@ -41,6 +41,7 @@ export default class CommentsWrapper extends Component {
               username={item.username}
               item={item.item}
               review={item.review}
+              id={item.id}
               
             />
             

@@ -103,6 +103,7 @@ keepCard = e => {
                <SiteButton action={this.goToUpdate} icon={<EditIcon />}/>
                 <SiteButton action={this.onDelete} icon={<DeleteIcon />}/>
                 </div>
+                
                 <Modal
                     showmodal={this.state.showmodal}
                     title={`Are you sure to delete this card?`}
