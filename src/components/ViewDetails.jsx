@@ -12,7 +12,8 @@ export default class ViewDetails extends Component {
 
         this.state = {
             id: this.props.location.state.id,
-            sneaker: {name:""
+            sneaker: {name:"",
+            
             },
             totalprice:"",
         }
