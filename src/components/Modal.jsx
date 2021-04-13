@@ -3,11 +3,11 @@ import React, { Component } from "react";
 
 var modalStyle = {
     position:"absolute",
-    top:"0",
+    bottom:"70%",
     left:"0%",
-    backgroundColor: "black",
+    backgroundColor: "gray",
     width:"100vw",
-    height:"100vh",
+    height:"20vh",
     color:"snow",
 }
 
@@ -20,8 +20,8 @@ class Modal extends Component {
     }
     return (
       <div className="my-modal" style={modalStyle}>
-        <h2>Modal Window</h2>
-        <button onClick={this.props.onClose}>Close</button>
+        <h2>{this.props.title}</h2>
+        <button onClick={this.props.action} >{this.props.message}</button>
         <div>{this.props.children}</div>
      
       </div>

@@ -4,9 +4,9 @@ $cardColor: #ecedef;
   display: flex;
   flex-direction: column;
   text-align: center;
-
   padding: 0;
   margin: 0;
+position: relative;
 }
 
 .card {
@@ -66,10 +66,10 @@ $cardColor: #ecedef;
 
 // comments
 
-.comment {
-  // background-color: blue;
-  // height: 200px;
-}
+// .comment {
+//   // background-color: blue;
+//   // height: 200px;
+// }
 
 .comment-card {
   background-color: $cardColor;

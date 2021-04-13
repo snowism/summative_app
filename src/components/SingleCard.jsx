@@ -104,8 +104,9 @@ keepCard = e => {
                 </div>
                 <Modal
                     showmodal={this.state.showmodal}
-                    comment={`Are you sure to delete this card?`}
+                    title={`Are you sure to delete this card?`}
                     action={this.onConfirm}
+                    
                     message={"Delete"}
                 > 
                 <SiteButton action={this.keepCard} message={"NOPE"} />
