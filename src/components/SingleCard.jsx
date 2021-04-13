@@ -91,14 +91,15 @@ keepCard = e => {
 
           className="card">
               
-       
+             
+
               <img onClick={this.goToDetails} src={"./images/" + this.props.filepath} className="product-img" alt=""/>
                <p>{this.props.brand}</p>
                <p>{this.props.name}</p>
 
                <p>NZD $ {this.props.price}</p>
               
-              <div className="icon-box">
+               <div className="icon-box">
                <SiteButton action={this.goToUpdate} icon={<EditIcon />}/>
                 <SiteButton action={this.onDelete} icon={<DeleteIcon />}/>
                 </div>

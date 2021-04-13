@@ -58,7 +58,7 @@ export default class ViewDetails extends Component {
 
 <div className="comment">
 
-      
+
     <CommentsWrapper/>
     <AddComment/>
 </div>

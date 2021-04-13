@@ -3,12 +3,13 @@ import React, { Component } from "react";
 
 var modalStyle = {
     position:"absolute",
-    bottom:"70%",
+    top:"20%",
     left:"0%",
     backgroundColor: "gray",
-    width:"100vw",
-    height:"20vh",
+    width:"90vw",
+    height:"30vh",
     color:"snow",
+    zindex: 1000,
 }
 
 

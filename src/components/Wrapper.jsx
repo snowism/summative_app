@@ -34,6 +34,7 @@ export default class Wrapper extends Component {
     return (
      
       <React.Fragment>
+        
         <SelectBrand/>
         
       <h3 className="title">Featured</h3>
