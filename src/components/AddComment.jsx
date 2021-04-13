@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
-
+import Modal from "./Modal";
 
 
 export default class AddComment extends Component {
@@ -11,6 +11,7 @@ export default class AddComment extends Component {
       username:"",
       item:"",
       review:"",
+      id: Date.now(),
       showmodal: false,
 
     };
@@ -94,7 +95,7 @@ export default class AddComment extends Component {
 
           <button className="submit-btn" type="submit">Add comment</button>
         </form>
-        {/* <Modal showmodal={this.state.showmodal} onClose={this.onClose}/> */}
+        <Modal showmodal={this.state.showmodal} onClose={this.onClose}/>
       </div>
     );
   }

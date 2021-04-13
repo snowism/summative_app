@@ -2,11 +2,27 @@ import React, { Component } from 'react';
 import { navigate } from '@reach/router';
 import Axios from "axios";
 import SiteButton from './SiteButton';
+import Modal from "./Modal";
 
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 
 export default class SingleCard extends Component {
+
+    constructor(props) {
+        super(props);
+        //state matches express model - the model is case-sensitive
+        this.state = {
+            name: "",
+            price: "",
+            filepath: "",
+            brand: "",
+            usedprice: "",
+            id: Date.now(),
+            showmodal: false,
+
+        };
+    }
 
     goToDetails = e => {
         
@@ -20,20 +36,48 @@ goToUpdate = e => {
 }
 
 onDelete = e => {
-    console.log("deleting", this.props.id);
-    
+
+
+    Axios.get(`http://localhost:4000/api/sneakers/${this.props.id}`).then(
+        (res) => {
+            console.table(res);
+
+            if (res.statusText === "OK") {
+                console.log("showmodal");
+                this.setState({ showmodal: true });
+            }
+        })
+}
+
+
+onConfirm = e => {
+
+    console.log("clicked confirm")
+    navigate(`/`);
     Axios.delete(`http://localhost:4000/api/sneakers/${this.props.id}`).then(
         res => {
             console.log(res)
-            if (res.data.deletedCount >= 1){
-                console.log (">>>>> successful deletion, reload items to see changes");
+
+
+            if (res.data.deletedCount >= 1) {
+                this.setState({ showmodal: false });
+                this.props.onSuccessfulDeletion();
+                console.log(">>>>> successful deletion, reload data to see changes");
             }
-                else {
-                    console.log (">>>> nothing deleted");
-                }
+            else {
+                console.log(">>>> nothing deleted");
             }
-    );
         }
+    );
+
+}
+
+
+keepCard = e => {
+    this.setState({ showmodal: false })
+}
+
+
 
     
 
@@ -58,7 +102,14 @@ onDelete = e => {
                <SiteButton action={this.goToUpdate} icon={<EditIcon />}/>
                 <SiteButton action={this.onDelete} icon={<DeleteIcon />}/>
                 </div>
-              
+                <Modal
+                    showmodal={this.state.showmodal}
+                    comment={`Are you sure to delete this card?`}
+                    action={this.onConfirm}
+                    message={"Delete"}
+                > 
+                <SiteButton action={this.keepCard} message={"NOPE"} />
+                </Modal>
             </div>
                
            

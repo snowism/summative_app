@@ -11,10 +11,17 @@ export default class Wrapper extends Component {
 
     this.state = {
       sneakersArray: [],
+      showmodal: false,
     };
   }
 
+
   componentDidMount() {
+
+    this.loadAllSneakers();
+  }
+
+  loadAllSneakers=(e)=>{
     Axios.get(`http://localhost:4000/api/sneakers/`).then((res) => {
       console.table(res.data);
       this.setState({
@@ -45,6 +52,7 @@ export default class Wrapper extends Component {
               brand={item.brand}
              id={item.id}
              filepath = {item.filepath}
+             onSuccessfulDeletion={this.loadAllSneakers}
             />
             
           );
