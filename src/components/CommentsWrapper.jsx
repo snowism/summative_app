@@ -27,8 +27,7 @@ export default class CommentsWrapper extends Component {
     return (
      
       <React.Fragment>
-     
-        
+    
       <h3 className="title">User Comments</h3>
     
      <div className="card-box">
