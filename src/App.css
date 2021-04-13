@@ -42,3 +42,9 @@
     margin-left: 105px;
     margin-top: 100px;
 }
+#browser{
+  background-color: #E3E0D8;
+  border-radius: 5;
+  width: 100%;
+  text-align: right;
+}

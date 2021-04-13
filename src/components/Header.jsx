@@ -91,14 +91,22 @@ export default function SearchAppBar() {
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
-            <InputBase
+            {/* <InputBase
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
-            />
+            /> */}
+            <form className="searchbar" action="/action_page.php" method="get"/>
+  <input list="browsers" name="browser" id="browser"/>
+  <datalist id="browsers">
+    <option value="Jordan"/>
+    <option value="Adidas"/>
+    <option value="Nike"/>
+  </datalist>
+<form/>
           </div>
         </Toolbar>
       </AppBar>
