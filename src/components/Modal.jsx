@@ -9,7 +9,7 @@ var modalStyle = {
     width:"90vw",
     height:"30vh",
     color:"snow",
-    zindex: 1000,
+    zIndex: 1000,
 }
 
 

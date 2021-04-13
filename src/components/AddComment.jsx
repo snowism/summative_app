@@ -46,6 +46,7 @@ export default class AddComment extends Component {
 
   onClose = e => {
     this.setState({ showmodal:false });
+   
   }
   
 
@@ -95,7 +96,7 @@ export default class AddComment extends Component {
 
           <button className="submit-btn" type="submit">Add comment</button>
         </form>
-        <Modal showmodal={this.state.showmodal} onClose={this.onClose}/>
+        <Modal showmodal={this.state.showmodal} action={this.onClose} message={"success posting"}/>
       </div>
     );
   }

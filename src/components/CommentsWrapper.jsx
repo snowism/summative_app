@@ -48,6 +48,7 @@ export default class CommentsWrapper extends Component {
           );
         })}
        </div>
+   
       </React.Fragment>
     );
   }
