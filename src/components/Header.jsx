@@ -6,6 +6,7 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import SearchIcon from '@material-ui/icons/Search';
+import renderEmpty from 'antd/lib/config-provider/renderEmpty';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -62,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  
 }));
 
 
@@ -69,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SearchAppBar() {
   const classes = useStyles();
 
-
+ 
   
   return (
     <div className={classes.root}>
@@ -99,7 +101,7 @@ export default function SearchAppBar() {
               }}
               inputProps={{ 'aria-label': 'search' }}
             /> */}
-            <form className="searchbar" action="/action_page.php" method="get"/>
+            <form  className="searchbar"  method="get"/>
   <input list="browsers" name="browser" id="browser"/>
   <datalist id="browsers">
     <option value="Jordan"/>
