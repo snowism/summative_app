@@ -12,6 +12,7 @@ position: relative;
 
 .card {
   font-family: "Courier New", Courier, monospace;
+  border-radius: 20px;
   background-color: $cardColor;
   width: 360px;
   text-align: center;
@@ -51,7 +52,6 @@ position: relative;
 }
 
 .icon-box {
-  background-color: cadetblue;
   display: flex;
   flex-direction: row;
   float: right;
@@ -68,11 +68,6 @@ position: relative;
 
 
 // comments
-
-// .comment {
-//   // background-color: blue;
-//   // height: 200px;
-// }
 
 .comment-card {
   background-color: $cardColor;
