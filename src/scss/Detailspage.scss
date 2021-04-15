@@ -78,6 +78,17 @@ padding: 1rem;
           
       }
     }
+
+    
+    .comment {
+      width: 420px;
+      height: 260px;
+      background-color: gray;
+      // background-color: red;
+      overflow: scroll;
+    }
+
+
     
 //button
 
@@ -86,3 +97,5 @@ width: 200px;
 height: 60px;
 border-radius: 2px;
     }
+
+
