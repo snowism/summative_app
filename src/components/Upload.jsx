@@ -4,14 +4,13 @@ import Modal from "./Modal";
 import { navigate } from "@reach/router";
 
 
-
 export default class Upload extends Component {
   constructor(props) {
     super(props);
     //state matches express model - the model is case-sensitive
     this.state = {
       name: "",
-      price: "",
+      newprice: "",
       usedprice:"",
       filepath: "",
       selectedFile: null,
@@ -25,21 +24,7 @@ export default class Upload extends Component {
 
     console.log("clicked confirm")
     navigate(`/`);
-    Axios.get(`http://localhost:4000/api/sneakers/${this.props.id}`).then(
-        res => {
-            console.log(res)
-
-
-            if (res.data.deletedCount >= 1) {
-                this.setState({ showmodal: false });
-                this.props.onSuccessfulDeletion();
-                console.log(">>>>> successful deletion, reload data to see changes");
-            }
-            else {
-                console.log(">>>> nothing deleted");
-            }
-        }
-    );
+    
 
 }
 
@@ -65,9 +50,12 @@ export default class Upload extends Component {
   handleName = (e) => {
     this.setState({ name: e.target.value });
   };
+  handleBrand = (e) => {
+    this.setState({ brand: e.target.value });
+  }
 
   handlePrice = (e) => {
-    this.setState({ price: e.target.value });
+    this.setState({ newprice: e.target.value });
   };
   handleUsedPrice = (e) => {
     this.setState({ usedprice: e.target.value });
@@ -101,6 +89,16 @@ export default class Upload extends Component {
               onChange={this.handleName}
             />
           </div>
+          <div>
+            <label>Brand</label>
+            <input
+              type="text"
+              name="brand"
+              placeholder="Brand"
+              value={this.state.brand}
+              onChange={this.handleBrand}
+            />
+          </div>
 
           <div>
             <label>Price</label>
@@ -108,7 +106,7 @@ export default class Upload extends Component {
               type="text"
               name="price"
               placeholder="new item price"
-              value={this.state.price}
+              value={this.state.newprice}
               onChange={this.handlePrice}
             />
           </div>
