@@ -3,7 +3,7 @@ import Axios from "axios";
 import SingleCard from "./SingleCard";
 
 
-export default class Nike extends Component {
+export default class Jordan extends Component {
 
 constructor(props){
   super(props);
@@ -36,7 +36,7 @@ constructor(props){
        {this.state.sneakersArray.map((item, index) => {
          
         
-if (item.brand === "NIKE"){
+if (item.brand === "JORDAN"){
   
   return (
       
@@ -56,7 +56,7 @@ if (item.brand === "NIKE"){
                 
               )
 } else {
-  console.log("only show nike")
+  console.log("only show jordan")
 }
  
        

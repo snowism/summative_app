@@ -1,6 +1,18 @@
 import React, { Component } from "react";
 import Axios from "axios";
-// import Modal from "./Modal"
+import Modal from "./Modal"
+import { navigate } from "@reach/router";
+
+
+var blackBtnStyle = {
+  width: "120px",
+  height: "26px",
+  background: "black",
+  color: "white",
+  border: "none",
+  borderRadius: "20px",
+}
+
 
 export default class UpdateCard extends Component {
   constructor(props) {
@@ -8,11 +20,13 @@ export default class UpdateCard extends Component {
 
     this.state = {
       name: "",
-      brand:"",
+      brand: "",
       newprice: "",
       usedprice: "",
+      price:"",
       id: this.props.location.state.id,
-      
+      showmodal: false,
+
     };
   }
 
@@ -21,18 +35,19 @@ export default class UpdateCard extends Component {
       res => {
         console.table(res.data);
         this.setState({
-            filepath: res.data.filepath,
+          filepath: res.data.filepath,
           name: res.data.name,
           brand: res.data.brand,
           newprice: res.data.newprice,
-          usedprice: res.data.oldprice,
-          
           id: res.data.id,
-         
+
         });
       }
     );
   }
+
+
+
 
   updateItem = e => {
     e.preventDefault();
@@ -43,7 +58,8 @@ export default class UpdateCard extends Component {
     ).then(res => {
       console.log(res);
       if (res.statusText === "OK") {
-       alert("Success - this needs a pretty modal")
+        this.setState({ showmodal: true });
+        console.log("changed")
       } else {
         alert("Fail - this needs a pretty modal")
       }
@@ -58,31 +74,30 @@ export default class UpdateCard extends Component {
     this.setState({ name: e.target.value });
   };
 
-  handleBrand =(e) => {
+  handleBrand = (e) => {
     this.setState({ brand: e.target.value });
   }
 
   handlePrice = (e) => {
-    this.setState({ newprice: e.target.value });
-  };
-  handleUsedPrice = (e) => {
-    this.setState({ usedprice: e.target.value });
+    this.setState({ newprice: e.target.value, price: e.target.value });
+
   };
 
-  onClose = e => {
-    console.log("123");
-    // this.props.showmodal = false;
-    this.setState({ showmodal: false });
-  };
+
+  onConfirm = (e) => {
+    navigate('/');
+  }
+
+
 
   render() {
 
     return (
-         <div className="form-wrapper">
+      <div className="form-wrapper">
         <h3>Update Product:</h3>
         <form className="special" onSubmit={this.updateItem}>
 
-        <div>
+          <div>
             <label>Image file path</label>
             <input
               type="text"
@@ -92,7 +107,7 @@ export default class UpdateCard extends Component {
               onChange={this.handleFilepath}
             />
           </div>
-        <div>
+          <div>
             <label>Name</label>
             <input
               type="text"
@@ -110,34 +125,26 @@ export default class UpdateCard extends Component {
               name="brand"
               placeholder=""
               value={this.state.brand}
-              onChange={this.handleAlbum}
+              onChange={this.handleBrand}
             />
           </div>
           <div>
             <label>Price</label>
             <input
               type="text"
-              name="price"
+              name="new price"
               placeholder="new item price"
               value={this.state.newprice}
               onChange={this.handlePrice}
             />
           </div>
-          <div>
-            <label>Used Price</label>
-            <input
-              type="text"
-              name="Used Price"
-              placeholder="used item price"
-              value={this.state.usedprice}
-              onChange={this.handleUsedPrice}
-            />
-          </div>
-         
+
+
           <br />
-          <button type="submit">Update details</button>
+          <button style={blackBtnStyle} action={this.updateItem} type="submit">Update details</button>
         </form>
 
+        <Modal showmodal={this.state.showmodal} title={"Update success"} message={"SWEET"} action={this.onConfirm} />
       </div>
     );
   }

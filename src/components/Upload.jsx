@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
-
+import Modal from "./Modal";
+import { navigate } from "@reach/router";
 
 
 export default class Upload extends Component {
@@ -9,7 +10,7 @@ export default class Upload extends Component {
     //state matches express model - the model is case-sensitive
     this.state = {
       name: "",
-      price: "",
+      newprice: "",
       usedprice:"",
       filepath: "",
       selectedFile: null,
@@ -18,6 +19,15 @@ export default class Upload extends Component {
 
     };
   }
+
+  onConfirm = e => {
+
+    console.log("clicked confirm")
+    navigate(`/`);
+    
+
+}
+
 
   handleSubmit = (event) => {
     console.log("new item - check MongoDB");
@@ -40,9 +50,12 @@ export default class Upload extends Component {
   handleName = (e) => {
     this.setState({ name: e.target.value });
   };
+  handleBrand = (e) => {
+    this.setState({ brand: e.target.value });
+  }
 
   handlePrice = (e) => {
-    this.setState({ price: e.target.value });
+    this.setState({ newprice: e.target.value });
   };
   handleUsedPrice = (e) => {
     this.setState({ usedprice: e.target.value });
@@ -53,9 +66,7 @@ export default class Upload extends Component {
   }
   
 
-handleFileInput = (e) => {
-    this.setState({filepath: e.target.files[0]})
-}
+
 
 
 
@@ -66,9 +77,7 @@ handleFileInput = (e) => {
             <h3>Sell your item</h3>
 
             
-            <div>
-        <input type="file" name="file" onChange={this.handleFileInput}/>
-        </div>
+           
 
           <div>
             <label>Name</label>
@@ -80,6 +89,16 @@ handleFileInput = (e) => {
               onChange={this.handleName}
             />
           </div>
+          <div>
+            <label>Brand</label>
+            <input
+              type="text"
+              name="brand"
+              placeholder="Brand"
+              value={this.state.brand}
+              onChange={this.handleBrand}
+            />
+          </div>
 
           <div>
             <label>Price</label>
@@ -87,7 +106,7 @@ handleFileInput = (e) => {
               type="text"
               name="price"
               placeholder="new item price"
-              value={this.state.price}
+              value={this.state.newprice}
               onChange={this.handlePrice}
             />
           </div>
@@ -116,7 +135,7 @@ handleFileInput = (e) => {
 
           <button className="submit-btn" type="submit">Submit</button>
         </form>
-        {/* <Modal showmodal={this.state.showmodal} onClose={this.onClose}/> */}
+        <Modal showmodal={this.state.showmodal} title={"Upload success"} message={"SWEET"} action={this.onConfirm}/>
       </div>
     );
   }

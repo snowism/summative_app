@@ -5,12 +5,25 @@ var modalStyle = {
     position:"absolute",
     top:"20%",
     left:"0%",
-    backgroundColor: "gray",
-    width:"90vw",
+    backgroundColor: "rgba(55, 55, 45, 0.7)",
+    width:"80vw",
     height:"30vh",
     color:"snow",
     zIndex: 1000,
 }
+
+var modalBtnstyle = {
+  width: "120px",
+  height: "26px",
+  background: "black",
+  color: "white",
+  border: "none",
+  borderRadius:"20px",
+  marginBottom: "0.6rem",
+
+}
+
+
 
 
 class Modal extends Component {
@@ -22,8 +35,8 @@ class Modal extends Component {
     return (
       <div className="my-modal" style={modalStyle}>
         <h2>{this.props.title}</h2>
-        <button onClick={this.props.action} >{this.props.message}</button>
-        <div>{this.props.children}</div>
+        <button onClick={this.props.action} style={modalBtnstyle}>{this.props.message}</button>
+        <div >{this.props.children}</div>
      
       </div>
     );

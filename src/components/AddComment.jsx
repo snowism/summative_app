@@ -55,6 +55,10 @@ export default class AddComment extends Component {
   render() {
     return (
       <div className="co-form-wrapper">
+
+<h3 className="title">User Comments</h3>
+
+
         <form onSubmit={this.handleSubmit}>
         
         <div className="row">
