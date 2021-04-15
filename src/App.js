@@ -1,5 +1,13 @@
 
 /* eslint-disable react/jsx-no-undef */
+<<<<<<< HEAD
+import Shipping from './components/Shipping';
+import './scss/Shipping.scss';
+=======
+<<<<<<< HEAD
+import ThankYou from './components/ThankYou';
+import './scss/ThankYou.scss';
+=======
 import {} from 'react-router-dom';
 
 
@@ -33,10 +41,18 @@ import './scss/Detailspage.scss';
 
 
 
+>>>>>>> 936871c9d20dd4d1914bcee68daba672c61819a1
+>>>>>>> 66f8bbe54a0ef7de5fc94269a8499dc9b7d1ad96
 
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
+     <Shipping/>
+=======
+<<<<<<< HEAD
+     <ThankYou/>
+=======
       {/* <Landing/> */}
      
      
@@ -51,6 +67,8 @@ function App() {
      </Router>
      <Footer/>
       
+>>>>>>> 936871c9d20dd4d1914bcee68daba672c61819a1
+>>>>>>> 66f8bbe54a0ef7de5fc94269a8499dc9b7d1ad96
     </div>
   );
 
