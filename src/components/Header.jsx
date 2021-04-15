@@ -6,12 +6,14 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import SearchIcon from '@material-ui/icons/Search';
-import renderEmpty from 'antd/lib/config-provider/renderEmpty';
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    position: "fixed",
+    zIndex:"1",
+    marginBottom:"10%"
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -24,14 +26,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   search: {
-    position: 'fixed',
+    position: 'relative',
     right: '3%',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
     '&:hover': {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
-    marginLeft: 0,
+    marginLeft: 170,
     width: '40%',
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(1),
