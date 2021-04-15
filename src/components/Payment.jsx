@@ -41,7 +41,7 @@ export default class Payment extends React.Component {
         navigate(-1);
       };
       goToConfirm = (e) => {
-    navigate(`/`);
+    navigate(`/order-confirm`);
     
       } 
 

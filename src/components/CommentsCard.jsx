@@ -4,7 +4,7 @@ import Axios from "axios";
 import SiteButton from "./SiteButton";
 
 import DeleteIcon from "@material-ui/icons/Delete";
-import EditIcon from "@material-ui/icons/Edit";
+
 
 export default class CommentsCard extends Component {
   onCommentDelete = (e) => {
@@ -14,7 +14,8 @@ export default class CommentsCard extends Component {
       (res) => {
         console.log(res);
         if (res.data.deletedCount >= 1) {
-          console.log(">>>>> successful deletion, reload items to see changes");
+          console.log(">>>>> successful deletion, reload items to see changes")
+          
         } else {
           console.log(">>>> nothing deleted");
         }

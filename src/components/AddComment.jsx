@@ -24,6 +24,7 @@ export default class AddComment extends Component {
 
       if(res.statusText === "OK"){
         this.setState({ showmodal:true });
+        console.log(this.state.id)
       }
     });
     event.preventDefault();

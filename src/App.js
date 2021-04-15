@@ -17,7 +17,7 @@ import Profile from "./components/Profile";
 import Upload from "./components/Upload";
 
 import Payment from "./components/Payment";
-
+import OrderConfirm from "./components/OrderConfirm";
 
 import './App.css';
 import './scss/Card.scss'
@@ -49,6 +49,7 @@ function App() {
    <Upload path="/add-product"/>
 
   <Payment path="/payment"/>
+  <OrderConfirm path="/order-confirm"/>
      </Router>
      <Footer/>
       
