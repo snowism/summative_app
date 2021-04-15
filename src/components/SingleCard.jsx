@@ -20,12 +20,13 @@ export default class SingleCard extends Component {
             usedprice: "",
             id: Date.now(),
             showmodal: false,
+            uid: 0
 
         };
     }
 
     goToDetails = e => {
-        
+        console.log("goToDetails")
         navigate (`/product-details`, {state: {id:this.props.id}});
         console.log("go to single info")
 }

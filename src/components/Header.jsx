@@ -6,7 +6,7 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import SearchIcon from '@material-ui/icons/Search';
-
+import { navigate } from "@reach/router";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -85,7 +85,7 @@ export default function SearchAppBar() {
             color="inherit"
             aria-label="back"
           >
-            <ArrowBackIosIcon/>
+            <ArrowBackIosIcon onClick={() => { navigate(-1) }}/>
           </IconButton>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

@@ -42,12 +42,13 @@ if (item.brand === "NIKE"){
       
 
     <SingleCard
-                  key={index}
+                  key={index}snow
                   name={item.name}
                   price={item.newprice}
                   usedPrice={item.oldprice}
                   brand={item.brand} 
                  filepath = {item.filepath}
+                 id = {item.id}
                 />
     
      
