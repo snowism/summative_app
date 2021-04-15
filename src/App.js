@@ -19,6 +19,8 @@ import Upload from "./components/Upload";
 import Payment from "./components/Payment";
 import OrderConfirm from "./components/OrderConfirm";
 
+import SelectSize from "./components/SelectSize";
+
 import './App.css';
 import './scss/Card.scss'
 import './scss/Style.scss'
@@ -34,7 +36,7 @@ function App() {
   return (
     <div className="App">
      
-     {/* <Landing/> */}
+   
      <Header/>
       <Router>
        

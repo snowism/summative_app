@@ -7,21 +7,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 
 
 export default class CommentsCard extends Component {
-  onCommentDelete = (e) => {
-    console.log("deleting", this.props.id);
-
-    Axios.delete(`http://localhost:4000/api/comments/${this.props.id}`).then(
-      (res) => {
-        console.log(res);
-        if (res.data.deletedCount >= 1) {
-          console.log(">>>>> successful deletion, reload items to see changes")
-          
-        } else {
-          console.log(">>>> nothing deleted");
-        }
-      }
-    );
-  };
+  
 
   render() {
     return (
@@ -36,9 +22,7 @@ export default class CommentsCard extends Component {
           <p>{this.props.review}</p>
         </div>
 
-        <div className="co-icon-box">
-          <SiteButton action={this.onCommentDelete} icon={<DeleteIcon />} />
-        </div>
+       
       </div>
       
     );

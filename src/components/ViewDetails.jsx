@@ -4,6 +4,7 @@ import SiteButton from "./SiteButton";
 import { navigate } from "@reach/router";
 import CommentsWrapper from "./CommentsWrapper";
 import AddComment from "./AddComment";
+import SelectSize from "./SelectSize";
 import { Link } from "@reach/router";
 
 var blackBtnStyle = {
@@ -76,23 +77,7 @@ navigate(`/payment`);
         </div>
 
       
-        <div className="select-size">
-          <div>
-            <span className="size">8.5</span>{" "}
-          </div>
-          <div>
-            <span className="size">9</span>{" "}
-          </div>
-          <div>
-            <span className="size">9.5</span>{" "}
-          </div>
-          <div>
-            <span className="size">10</span>{" "}
-          </div>
-          <div>
-            <span className="size">10.5</span>{" "}
-          </div>
-        </div>
+        <SelectSize/>
 
       
 
