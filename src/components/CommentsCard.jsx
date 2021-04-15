@@ -3,11 +3,9 @@ import { navigate } from "@reach/router";
 import Axios from "axios";
 import SiteButton from "./SiteButton";
 
-import DeleteIcon from "@material-ui/icons/Delete";
-
 
 export default class CommentsCard extends Component {
-  
+ 
 
   render() {
     return (
@@ -22,7 +20,7 @@ export default class CommentsCard extends Component {
           <p>{this.props.review}</p>
         </div>
 
-       
+      
       </div>
       
     );

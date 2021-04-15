@@ -1,12 +1,11 @@
 /* eslint-disable react/jsx-no-undef */
 
-import { Router } from '@reach/router'
+import { Router } from "@reach/router";
 
 
-// import Landing from './components/Landing';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Wrapper from './components/Wrapper';
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
 import Nike from "./components/Nike";
 import Adidas from "./components/Adidas";
 import Jordan from "./components/Jordan";
@@ -21,40 +20,31 @@ import OrderConfirm from "./components/OrderConfirm";
 
 import SelectSize from "./components/SelectSize";
 
-import './App.css';
-import './scss/Card.scss'
-import './scss/Style.scss'
-import './scss/Form.scss'
-import './scss/Detailspage.scss'
-
-
-
-
-
+import "./App.css";
+import "./scss/Card.scss";
+import "./scss/Style.scss";
+import "./scss/Form.scss";
+import "./scss/Detailspage.scss";
 
 function App() {
   return (
     <div className="App">
-     
-   
-     <Header/>
+      <Header />
       <Router>
-       
-     <Wrapper path="/"/>
-     <ViewDetails path="/product-details"/>
-     <Nike path="/show-nike"/>
-     <Adidas path="/show-adidas"/>
-     <Jordan path="/show-jordan"/>
-     <UpdateCard path="update"/>
-   
-   <Profile path="/user-profile"/>
-   <Upload path="/add-product"/>
+        <Wrapper path="/" />
+        <ViewDetails path="/product-details" />
+        <Nike path="/show-nike" />
+        <Adidas path="/show-adidas" />
+        <Jordan path="/show-jordan" />
+        <UpdateCard path="update" />
 
-  <Payment path="/payment"/>
-  <OrderConfirm path="/order-confirm"/>
-     </Router>
-     <Footer/>
-      
+        <Profile path="/user-profile" />
+        <Upload path="/add-product" />
+
+        <Payment path="/payment" />
+        <OrderConfirm path="/order-confirm" />
+      </Router>
+      <Footer />
     </div>
   );
 }

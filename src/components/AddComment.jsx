@@ -24,7 +24,6 @@ export default class AddComment extends Component {
 
       if(res.statusText === "OK"){
         this.setState({ showmodal:true });
-        console.log(this.state.id)
       }
     });
     event.preventDefault();
@@ -101,7 +100,7 @@ export default class AddComment extends Component {
 
           <button className="submit-btn" type="submit">Add comment</button>
         </form>
-        <Modal showmodal={this.state.showmodal} action={this.onClose} message={"success posting"}/>
+        <Modal showmodal={this.state.showmodal} action={this.onClose} title={"successful uploaded"} message={"SWEET"}/>
       </div>
     );
   }
