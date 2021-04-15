@@ -16,6 +16,7 @@ import UpdateCard from "./components/UpdateCard";
 import Profile from "./components/Profile";
 import Upload from "./components/Upload";
 
+import Payment from "./components/Payment";
 
 
 import './App.css';
@@ -47,7 +48,7 @@ function App() {
    <Profile path="/user-profile"/>
    <Upload path="/add-product"/>
 
-  
+  <Payment path="/payment"/>
      </Router>
      <Footer/>
       

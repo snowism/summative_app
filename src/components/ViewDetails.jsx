@@ -4,11 +4,11 @@ import SiteButton from "./SiteButton";
 import { navigate } from "@reach/router";
 import CommentsWrapper from "./CommentsWrapper";
 import AddComment from "./AddComment";
-
+import { Link } from "@reach/router";
 
 var blackBtnStyle = {
     width: "120px",
-    height: "26px",
+    height: "30px",
     background: "black",
     color: "white",
     border: "none",
@@ -17,7 +17,7 @@ var blackBtnStyle = {
 
 var whiteBtnStyle = {
     width: "80px",
-    height: "26px",
+    height: "30px",
     background: "white",
     color: "black",
     border: "none",
@@ -51,12 +51,10 @@ export default class ViewDetails extends Component {
   navigateBack = (e) => {
     navigate(-1);
   };
+  goToPayment = (e) => {
+navigate(`/payment`);
 
-  clickedPrice = (e) => {
-    this.setState({ totalprice: e.target.value });
-
-    console.log(e.target.value);
-  };
+  } 
 
   render() {
     return (
@@ -100,7 +98,7 @@ export default class ViewDetails extends Component {
 
         <div className="button-box">
           <SiteButton message="Back" action={this.navigateBack} style={whiteBtnStyle}/>
-          <SiteButton message="CheckOut" style={blackBtnStyle}/>
+          <SiteButton message="CheckOut" style={blackBtnStyle} action={this.goToPayment}/>
         </div>
       </div>
     );
