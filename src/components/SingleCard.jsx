@@ -7,6 +7,18 @@ import Modal from "./Modal";
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 
+
+
+
+var whiteBtnStyle = {
+    width: "120px",
+    height: "26px",
+    background: "white",
+    color: "black",
+    border: "none",
+    borderRadius:"20px",
+  }
+
 export default class SingleCard extends Component {
 
     constructor(props) {
@@ -26,7 +38,7 @@ export default class SingleCard extends Component {
     }
 
     goToDetails = e => {
-        console.log("goToDetails")
+     
         navigate (`/product-details`, {state: {id:this.props.id}});
         console.log("go to single info")
 }
@@ -112,7 +124,7 @@ keepCard = e => {
                     
                     message={"Delete"}
                 > 
-                <SiteButton action={this.keepCard} message={"NOPE"} />
+                <SiteButton action={this.keepCard} message={"NOPE"} style={whiteBtnStyle}/>
                 </Modal>
             </div>
                

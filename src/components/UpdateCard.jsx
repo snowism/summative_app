@@ -1,6 +1,18 @@
 import React, { Component } from "react";
 import Axios from "axios";
-// import Modal from "./Modal"
+import Modal from "./Modal"
+import { navigate } from "@reach/router";
+
+
+var blackBtnStyle = {
+  width: "120px",
+  height: "26px",
+  background: "black",
+  color: "white",
+  border: "none",
+  borderRadius:"20px",
+}
+
 
 export default class UpdateCard extends Component {
   constructor(props) {
@@ -12,6 +24,7 @@ export default class UpdateCard extends Component {
       newprice: "",
       usedprice: "",
       id: this.props.location.state.id,
+      showmodal: false,
       
     };
   }
@@ -26,8 +39,7 @@ export default class UpdateCard extends Component {
           brand: res.data.brand,
           newprice: res.data.newprice,
           usedprice: res.data.oldprice,
-          
-          id: res.data.id,
+         id: res.data.id,
          
         });
       }
@@ -69,11 +81,14 @@ export default class UpdateCard extends Component {
     this.setState({ usedprice: e.target.value });
   };
 
-  onClose = e => {
-    console.log("123");
-    // this.props.showmodal = false;
-    this.setState({ showmodal: false });
-  };
+  
+
+onConfirm = e => {
+  this.setState({ showmodal: false });
+  navigate(-1);
+};
+
+
 
   render() {
 
@@ -135,9 +150,10 @@ export default class UpdateCard extends Component {
           </div>
          
           <br />
-          <button type="submit">Update details</button>
+          <button style={blackBtnStyle} type="submit">Update details</button>
         </form>
 
+        <Modal showmodal={this.state.showmodal} title={"Update success"} message={"SWEET"} action={this.onConfirm}/>
       </div>
     );
   }
