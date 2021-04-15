@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-no-undef */
-import logo from './logo.svg';
+
 import { Router } from '@reach/router'
 
 
+// import Landing from './components/Landing';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Wrapper from './components/Wrapper';
@@ -11,9 +12,11 @@ import Adidas from "./components/Adidas";
 import Jordan from "./components/Jordan";
 import ViewDetails from "./components/ViewDetails";
 import UpdateCard from "./components/UpdateCard";
+
+import Profile from "./components/Profile";
 import Upload from "./components/Upload";
 
-import CommentsWrapper from "./components/CommentsWrapper";
+
 
 import './App.css';
 import './scss/Card.scss'
@@ -30,6 +33,7 @@ function App() {
   return (
     <div className="App">
      
+     {/* <Landing/> */}
      <Header/>
       <Router>
        
@@ -38,8 +42,12 @@ function App() {
      <Nike path="/show-nike"/>
      <Adidas path="/show-adidas"/>
      <Jordan path="/show-jordan"/>
+     <UpdateCard path="update"/>
+   
+   <Profile path="/user-profile"/>
    <Upload path="/add-product"/>
-   <UpdateCard path="update"/>
+
+  
      </Router>
      <Footer/>
       

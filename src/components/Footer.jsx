@@ -34,7 +34,7 @@ export default function LabelBottomNavigation() {
   return (
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
       <BottomNavigationAction component={Link} to="/" label="Home" value="home" icon={<HomeIcon/>} />
-      <BottomNavigationAction label="Profile" value="profile" icon={<PersonIcon />} />
+      <BottomNavigationAction component={Link} abel="Profile" to="/user-profile" value="profile" icon={<PersonIcon />} />
       
      
       <BottomNavigationAction component={Link} to="/add-product" label="Sell" value="sell" icon={<LoyaltyIcon/> } />
