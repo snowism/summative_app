@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Wrapper from './components/Wrapper';
 import Nike from "./components/Nike";
 import Adidas from "./components/Adidas";
+import Jordan from "./components/Jordan";
 import ViewDetails from "./components/ViewDetails";
 import UpdateCard from "./components/UpdateCard";
 import Upload from "./components/Upload";
@@ -36,6 +37,7 @@ function App() {
      <ViewDetails path="/product-details"/>
      <Nike path="/show-nike"/>
      <Adidas path="/show-adidas"/>
+     <Jordan path="/show-jordan"/>
    <Upload path="/add-product"/>
    <UpdateCard path="update"/>
      </Router>

@@ -5,7 +5,7 @@ var modalStyle = {
     position:"absolute",
     top:"20%",
     left:"0%",
-    backgroundColor: "gray",
+    backgroundColor: "rgba(226, 4, 0, 0.5)",
     width:"90vw",
     height:"30vh",
     color:"snow",

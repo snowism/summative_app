@@ -82,9 +82,9 @@ padding: 1rem;
     
     .comment {
       width: 420px;
-      height: 260px;
-      background-color: gray;
-      // background-color: red;
+      height: 280px;
+     border-top: 1px grey solid;
+     border-bottom: 1px grey solid;
       overflow: scroll;
     }
 
