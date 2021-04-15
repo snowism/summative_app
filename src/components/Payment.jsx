@@ -1,5 +1,24 @@
 import React, { Component } from 'react';
+import { Link, navigate } from "@reach/router";
+import SiteButton from './SiteButton';
 
+var blackBtnStyle = {
+    width: "120px",
+    height: "30px",
+    background: "black",
+    color: "white",
+    border: "none",
+    borderRadius:"20px",
+}
+
+var whiteBtnStyle = {
+    width: "80px",
+    height: "30px",
+    background: "white",
+    color: "black",
+    border: "none",
+    borderRadius:"20px",
+}
 
 export default class Payment extends React.Component {
     state={ Name_on_card:'',
@@ -18,14 +37,24 @@ export default class Payment extends React.Component {
 
     }
     
+    navigateBack = (e) => {
+        navigate(-1);
+      };
+      goToConfirm = (e) => {
+    navigate(`/`);
+    
+      } 
+
+    
+
     render() {
         return (
             <div className="payment">
                 <div class="payment_container">
                 
-                     <h1>Payment Method</h1>
+                     <h3>Payment Method</h3>
 
-                     <form>
+                     <form className="form-pay">
 
                       <div className="form_container">  
                      <h2>Name on card</h2>
@@ -53,10 +82,9 @@ export default class Payment extends React.Component {
                 
      </div>   
                 
-                 <div className="buttons_container">
-                     <button className="Return_button">Return</button>
-
-                     <button className="Continue_button" onSubmit={this.handleSubmit} >Continue</button>
+     <div className="button-box">
+                 <SiteButton message="Back" action={this.navigateBack} style={whiteBtnStyle}/>
+          <SiteButton message="Confirm" style={blackBtnStyle} action={this.goToConfirm}/>
                  </div>
 
             </div>
