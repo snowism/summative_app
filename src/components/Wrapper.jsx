@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import SingleCard from "./SingleCard";
+import SelectBrand from "./SelectBrand";
+
+//all product
 
 export default class Wrapper extends Component {
   constructor(props) {
@@ -19,35 +22,34 @@ export default class Wrapper extends Component {
       });
     });
   }
-
+  
   render() {
     return (
-            
+     
       <React.Fragment>
-        <div>
-              <h3> Select by brand </h3>
-            </div>
-      <div>
-        <div className="nike">a</div>
-        <div className="nike">b</div>
-        <div className="nike">c</div>
-      </div>
-      <h3>Featured</h3>
+        <SelectBrand/>
+        
+      <h3 className="title">Featured</h3>
+     
+     <div className="card-box">
         {this.state.sneakersArray.map((item, index) => {
           return (
            
             
+
             <SingleCard
               key={index}
               name={item.name}
               price={item.newprice}
               usedPrice={item.oldprice}
+              brand={item.brand}
              id={item.id}
              filepath = {item.filepath}
             />
             
           );
         })}
+       </div>
       </React.Fragment>
     );
   }
