@@ -1,0 +1,149 @@
+html{ background-color:#e3e0d8 ;}
+
+.payment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    
+}
+
+
+form{
+    background-color: transparent;
+    border:2px solid black;
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.form_container{
+    margin-left: 25px;
+}
+
+
+
+h1{
+    font-family: 'Roboto';
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+h2{
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 800;
+   font-size: 15px;
+   letter-spacing: 0.5px;
+   color: black;
+   margin-top: 20px;
+   
+}
+
+
+
+input{
+   width: 290px;
+   height: 50px;
+   background-color: transparent;
+   border: solid 0.2px black;
+   border-radius: 4px;
+   font-size: 20px;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.icon_previous {
+   margin-left: 15px;
+      color: white;
+      font-size: 25px;
+      line-height: 50px;
+      float: left;
+      
+    }
+
+///buttons///
+
+
+.buttons_container{
+    height: 90px;
+    width: 100%;
+    margin-top: 50px;
+    align-items: center;
+    border-top: solid 2px black;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px black;
+}
+
+.Return_button{
+    height: 45px;
+    width: 135px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-decoration: none;
+    list-style: none;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 10px;
+    font-family: 'Roboto';
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    margin-top: 45px;
+    margin-left: -105px;
+}    
+
+.Continue_button{
+    height: 45px;
+    width: 175px;
+    background: black;
+    border-radius: 8px;
+    border-style: none;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 10px;
+    font-family: 'Roboto';
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    margin-top: 45px;
+    margin-left: 90px;
+}    
+    
+    .button_previous{
+       height: 45px;
+       width: 80px;
+      margin: 0 5px;
+      background: black;
+      border-radius: 8px;
+      transition: all 0.3s ease-out;
+      overflow: hidden;
+      text-decoration: none;
+      list-style: none;
+      margin-top: 10px;
+     margin-left: -40px;
+      
+    }
+    
+    .button_previous span{
+       font-size: 15px;
+      font-weight: 500;
+      line-height: 45px;
+      color: white;
+      margin-left: 30px;
+      font-family: 'Roboto';
+     
+    }
+    
+    .button_previous:hover{
+      width: 175px;
+      cursor: pointer;
+    }
+
+
